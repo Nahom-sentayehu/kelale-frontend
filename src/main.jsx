@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Booking from './pages/Booking';
+import RouteDetails from './pages/RouteDetails';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
 import CompanyDashboard from './pages/CompanyDashboard';
@@ -76,8 +76,11 @@ function App() {
         {/* Navbar */}
         <nav className="bg-black text-yellow-400 p-4 flex flex-wrap justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="font-bold text-xl">Kelale Transport</div>
-            <span className="text-sm opacity-80">Book intercity buses across Ethiopia</span>
+            <img src="/logo.svg" alt="Kelale Transport Logo" className="h-12 w-auto logo-3d" />
+            <div>
+              <div className="font-bold text-xl text-3d-pulse">KELALE TRANSPORT</div>
+              <span className="text-sm opacity-80">Book intercity buses across Ethiopia</span>
+            </div>
           </div>
           <div className="space-x-4 flex items-center">
             <Link to="/" className="hover:underline">Home</Link>
@@ -107,7 +110,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/booking/:routeId" element={<Booking />} />
+            <Route path="/route-details/:routeId" element={<RouteDetails />} />
             <Route path="/profile" element={<Profile />} />
             <Route 
               path="/admin" 
